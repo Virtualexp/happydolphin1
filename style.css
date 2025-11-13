@@ -1,0 +1,134 @@
+body {
+  background-image: url('gallery/waves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #40FFB0;
+  font-family: "VT323", monospace;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 20, 0.35);
+  pointer-events: none;
+}
+
+.center-content {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  position: relative;
+  top: -40px;
+  font-size: 48px;
+  color: #7CFFB2;
+  text-shadow: 0 0 8px #40FFB0, 0 0 15px rgba(64,255,176,0.5);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.profile {
+  width: 340px;
+  height: 340px;
+  border: 2px solid #40FFB0;
+  border-radius: 50%;
+  background-image: url('gallery/dolphin/dolphin.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 25px #40FFB0;
+}
+
+.win98 {
+  position: absolute;
+  width: 340px;
+  z-index: 999;
+  touch-action: none;
+  transform: scale(1.3);
+  transform-origin: center;
+}
+
+.menu-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+.trail {
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 3s linear;
+}
+
+/* Pencere içleri 98.css tarzında */
+.window-body, .message-text, .cmd-input, .button {
+  font-family: "MS Sans Serif", sans-serif !important;
+  color: black !important;
+  font-size: medium !important;
+}
+.window-body { background-color: #c0c0c0 !important; }
+.cmd-input {
+  background: white !important;
+  color: black !important;
+  font-size: 18px !important;
+  border: inset 2px #fff;
+}
+
+.message-icon {
+  width: 32px; height: 32px;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .message-icon { width: 24px; height: 24px; }
+}
+
+/* 🌐 Network Mirage efektleri */
+body.network-mirage {
+  filter: blur(0.6px) brightness(1.05) saturate(1.1) hue-rotate(8deg);
+}
+body.network-mirage.end { filter: none; }
+
+/* 🔒 Mirage sırasında kilit */
+#mirage-lock {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.2px);
+  z-index: 9998;
+  pointer-events: all;
+  cursor: not-allowed;
+}
+
+/* Buton boyutları ve görsel tutarlılık */
+.menu-btn {
+  width: 200px;
+  font-size: 20px !important;
+  padding: 10px 0 !important;
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px #40FFB0;
+}

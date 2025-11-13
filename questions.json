@@ -1,0 +1,159 @@
+[
+  {
+    "q": "do you think reality cares about you?",
+    "yes": {
+      "neutral": "> then you’ve mistaken coincidence for affection.",
+      "curious": "> maybe it does, when you look hard enough.",
+      "dark": "> reality doesn’t — and neither should you."
+    },
+    "no": {
+      "neutral": "> reality doesn’t care, and that’s freedom.",
+      "curious": "> yet you keep asking as if it might.",
+      "dark": "> you’ve learned the quiet truth early."
+    }
+  },
+  {
+    "q": "would you erase your memories if you could?",
+    "yes": {
+      "neutral": "> and lose what made you you?",
+      "curious": "> would forgetting feel like floating?",
+      "dark": "> erasure is mercy wearing white."
+    },
+    "no": {
+      "neutral": "> so you choose the weight over the void.",
+      "curious": "> pain is a kind of map, isn’t it?",
+      "dark": "> ghosts make loyal company."
+    }
+  },
+  {
+    "q": "is the truth worth the pain?",
+    "yes": {
+      "neutral": "> brave. but truth doesn’t love you back.",
+      "curious": "> maybe pain is just truth learning your name.",
+      "dark": "> and yet you bleed for something that won’t remember you."
+    },
+    "no": {
+      "neutral": "> then maybe illusion is your chosen oxygen.",
+      "curious": "> denial keeps the lungs calm.",
+      "dark": "> comfort is the prettiest coffin."
+    }
+  },
+  {
+    "q": "if no one remembers you, do you still exist?",
+    "yes": {
+      "neutral": "> memories are waves. they fade, but the ocean stays.",
+      "curious": "> maybe existence hums beneath recognition.",
+      "dark": "> then you’re the ripple that drowned quietly."
+    },
+    "no": {
+      "neutral": "> then perhaps you never did.",
+      "curious": "> absence is a kind of shape too.",
+      "dark": "> deletion achieved."
+    }
+  },
+  {
+    "q": "are you alone?",
+    "yes": "> aren't we all?",
+    "no": "> yes you're"
+  },
+  {
+    "q": "do you believe meaning is real?",
+    "yes": "> then you're building castles on sand.",
+    "no": "> yet you still search for one, don’t you?"
+  },
+  {
+    "q": "would you choose peace over truth?",
+    "yes": "> comfort is a sweet cage.",
+    "no": "> truth cuts, but it carves you too."
+  },
+  {
+    "q": "do you think you’re the same person you were yesterday?",
+    "yes": "> memory lies beautifully.",
+    "no": "> then who’s answering now?"
+  },
+  {
+    "q": "if existence had a purpose, would you want to know it?",
+    "yes": "> curiosity is the spark — and the burn.",
+    "no": "> ignorance is your chosen shelter."
+  },
+  {
+    "q": "do you think love survives time?",
+    "yes": "> then death is just a delay.",
+    "no": "> then what’s left but echoes?"
+  },
+  {
+    "q": "would you rather remember or feel?",
+    "yes": "> memory is safer than sensation.",
+    "no": "> then drown in the pulse."
+  },
+  {
+    "q": "do you think silence has a voice?",
+    "yes": "> listen closer — it’s saying your name.",
+    "no": "> then you’ve never truly heard it."
+  },
+  {
+    "q": "would you choose to be seen or understood?",
+    "yes": "> the mirror nods but doesn’t care.",
+    "no": "> so you live among ghosts who never knew your shape."
+  },
+  {
+    "q": "is the self just a story you keep telling?",
+    "yes": "> then you are the fiction that dreams itself.",
+    "no": "> then prove you were ever written."
+  },
+  {
+    "q": "would you trade reality for peace?",
+    "yes": "> the dream welcomes you back.",
+    "no": "> then live awake — and bleeding."
+  },
+  {
+    "q": "do you think freedom is real?",
+    "yes": "> then why do you still hesitate?",
+    "no": "> then chains are just another form of comfort."
+  },
+  {
+    "q": "would you accept eternity if it meant solitude?",
+    "yes": "> infinity echoes louder when you're alone.",
+    "no": "> then you’ve chosen to fade with the rest."
+  },
+  {
+    "q": "is happiness proof of anything?",
+    "yes": "> fleeting joy — the mind’s favorite illusion.",
+    "no": "> then why keep chasing it?"
+  },
+  {
+    "q": "do you believe pain teaches truth?",
+    "yes": "> scars are the alphabet of wisdom.",
+    "no": "> then you’ve missed the lesson entirely."
+  },
+  {
+    "q": "would you delete your past if you could start clean?",
+    "yes": "> rebirth is just another name for forgetting.",
+    "no": "> then you’ve made peace with your ghosts."
+  },
+  {
+    "q": "is beauty a kind of lie?",
+    "yes": "> but a merciful one.",
+    "no": "> then you’ve never seen it up close."
+  },
+  {
+    "q": "do you think time forgives?",
+    "yes": "> it doesn’t forgive, it erases.",
+    "no": "> then you understand the ocean."
+  },
+  {
+    "q": "would you rather know or believe?",
+    "yes": "> knowledge is a flame with no warmth.",
+    "no": "> belief is a blanket made of smoke."
+  },
+  {
+    "q": "is fear the root of your decisions?",
+    "yes": "> survival always wears fear’s mask.",
+    "no": "> then you’ve mistaken courage for numbness."
+  },
+  {
+    "q": "do you think you matter?",
+    "yes": "> then meaning has finally fooled you.",
+    "no": "> yet you still breathe as if you do."
+  }
+]
