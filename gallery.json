@@ -82,5 +82,17 @@
     "title": "Landscape IV",
     "desc": "light fracturing across digital hills.",
     "series": "landscape"
+  },
+  {
+    "file": "gallery/projects/lorenzattractor/chaos1.jpg",
+    "title": "Strange Flow I",
+    "desc": "two wings, infinite futures.",
+    "series": "chaos"
+  },
+  {
+    "file": "gallery/projects/lorenzattractor/chaos2.jpg",
+    "title": "Strange Flow II",
+    "desc": "motion that remembers every mistake and amplifies it beautifully.",
+    "series": "chaos"
   }
 ]

@@ -1,13 +1,13 @@
 import {
   clickState,
-  MIRAGE_THRESHOLD,
+ 
   getUniqueMessage,
   dolphinSound,
   makeDraggable,
   bringToFront
 } from "./core.js";
 
-import { triggerNetworkMirage, mirageTriggered } from "./mirage.js";
+
 
 export function createOceanOSWindow() {
   const existing = document.querySelector('.win98.oceanos');
@@ -52,11 +52,6 @@ export function createOceanOSWindow() {
   yesButton.addEventListener('click', () => {
     clickState.value++;
 
-    // Mirage tetikleme
-    if (clickState.value >= MIRAGE_THRESHOLD && !mirageTriggered.value) {
-      triggerNetworkMirage();
-      return;
-    }
 
     wrapper.remove();
     createOceanOSWindow();

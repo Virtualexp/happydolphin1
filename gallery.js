@@ -185,3 +185,6 @@ export function createGalleryWindow() {
     if (seriesList.length > 0) loadSeries(seriesList[0]);
   }
 }
+
+
+

@@ -1,159 +1,115 @@
 [
   {
-    "q": "do you think reality cares about you?",
-    "yes": {
-      "neutral": "> then you’ve mistaken coincidence for affection.",
-      "curious": "> maybe it does, when you look hard enough.",
-      "dark": "> reality doesn’t — and neither should you."
-    },
-    "no": {
-      "neutral": "> reality doesn’t care, and that’s freedom.",
-      "curious": "> yet you keep asking as if it might.",
-      "dark": "> you’ve learned the quiet truth early."
-    }
+    "id": "desert_journey",
+    "title": "Desert Journey",
+    "steps": [
+      {
+        "question": "You are riding a camel across a vast, empty desert that seems to have no end. You’ve pushed the camel until it’s utterly exhausted. What words do you say to the camel that has been carrying you?",
+        "templates": [
+          "Saying “{{answer}}” is exactly the kind of thing you whisper to yourself when you know something is slipping away.",
+          "“{{answer}}” feels like the thought that surfaces only when you finally accept the quiet ending.",
+          "There’s something in “{{answer}}” that sounds like the moment you stop holding on.",
+          "“{{answer}}” carries the softness of something you say only when your heart realizes it’s losing its place.",
+          "There’s a fragile honesty in “{{answer}}”—the kind that only appears when love begins to fade.",
+          "“{{answer}}” sounds like the quiet truth you tell yourself when the horizon begins to dim.",
+          "“{{answer}}” feels like the sentence that escapes when you finally hear the quiet crack of something breaking.",
+          "There’s a shadow in “{{answer}}”—the kind that only appears when the heart knows the end is already here.",
+          "“{{answer}}” has the tone of a thought you don’t say aloud until everything has already changed."
+        ]
+      },
+      {
+        "question": "You finally reach an oasis, but someone has arrived before you. Who is it?",
+        "templates": [
+          "I don’t know who that is, but {{answer}}… you loved them deeply, didn’t you?",
+          "I’m not sure who {{answer}} really is to you, but your heart clearly remembers them.",
+          "{{answer}}… curious how they’re still the one your mind runs to when you’re worn thin, isn’t it?",
+          "Whoever {{answer}} is, there’s a quiet part of you that never stopped leaning toward them.",
+          "{{answer}}… funny how they still live in the softest corner of your tired thoughts.",
+          "Strange how {{answer}} shows up at the oasis—your heart hasn’t completely let go of them, has it?",
+          "{{answer}}… a name that seems to sit very close to the place where you seek safety.",
+          "{{answer}}… you still feel something, even if you don’t say it out loud, don’t you?"
+        ]
+      },
+      {
+        "question": "After hours in the desert, you finally see the lights of a town. How do you feel as you approach it?",
+        "templates": [
+          "Feeling “{{answer}}” as you reach the town quietly reveals what your heart truly feels about what has ended.",
+          "There’s something in feeling “{{answer}}” that sounds like your heart finally admitting what it held onto for too long.",
+          "“{{answer}}”… that’s the kind of feeling that rises only when you’re facing the truth of a quiet ending.",
+          "The fact that you felt “{{answer}}” says more about your real goodbye than anything else ever could.",
+          "Feeling “{{answer}}” as the lights appear is your heart’s way of telling you what it refused to speak before.",
+          "“{{answer}}” is exactly the kind of feeling that forms when something is over, but not yet gone.",
+          "If “{{answer}}” is what you felt approaching the town, then that’s what your heart still whispers about what faded."
+        ]
+      },
+      {
+        "question": "When you reach the town, someone else mounts your camel. Who is it?",
+        "templates": [
+          "Funny how {{answer}} is the one taking the saddle now… some part of you still measures yourself against them, doesn’t it?",
+          "{{answer}} taking that seat says a lot about the shadow they still leave in your mind.",
+          "It’s interesting that {{answer}} is the one who shows up there—your heart hasn’t quite walked past them yet.",
+          "{{answer}} climbing onto your camel feels like the echo of someone you’re not done confronting inside.",
+          "{{answer}}… a name that still stirs something in you, even if you pretend it doesn’t.",
+          "So {{answer}} gets the saddle? You’re still watching them from the corner of your heart.",
+          "{{answer}} taking that place hints at someone you’re still carrying around in a quiet, heavy way.",
+          "{{answer}}… the one who ends up in that spot always says more about you than you expect.",
+          "{{answer}} stepping in like that hints at a rivalry or ache you haven’t fully buried yet."
+        ]
+      }
+    ]
   },
+
   {
-    "q": "would you erase your memories if you could?",
-    "yes": {
-      "neutral": "> and lose what made you you?",
-      "curious": "> would forgetting feel like floating?",
-      "dark": "> erasure is mercy wearing white."
-    },
-    "no": {
-      "neutral": "> so you choose the weight over the void.",
-      "curious": "> pain is a kind of map, isn’t it?",
-      "dark": "> ghosts make loyal company."
-    }
-  },
-  {
-    "q": "is the truth worth the pain?",
-    "yes": {
-      "neutral": "> brave. but truth doesn’t love you back.",
-      "curious": "> maybe pain is just truth learning your name.",
-      "dark": "> and yet you bleed for something that won’t remember you."
-    },
-    "no": {
-      "neutral": "> then maybe illusion is your chosen oxygen.",
-      "curious": "> denial keeps the lungs calm.",
-      "dark": "> comfort is the prettiest coffin."
-    }
-  },
-  {
-    "q": "if no one remembers you, do you still exist?",
-    "yes": {
-      "neutral": "> memories are waves. they fade, but the ocean stays.",
-      "curious": "> maybe existence hums beneath recognition.",
-      "dark": "> then you’re the ripple that drowned quietly."
-    },
-    "no": {
-      "neutral": "> then perhaps you never did.",
-      "curious": "> absence is a kind of shape too.",
-      "dark": "> deletion achieved."
-    }
-  },
-  {
-    "q": "are you alone?",
-    "yes": "> aren't we all?",
-    "no": "> yes you're"
-  },
-  {
-    "q": "do you believe meaning is real?",
-    "yes": "> then you're building castles on sand.",
-    "no": "> yet you still search for one, don’t you?"
-  },
-  {
-    "q": "would you choose peace over truth?",
-    "yes": "> comfort is a sweet cage.",
-    "no": "> truth cuts, but it carves you too."
-  },
-  {
-    "q": "do you think you’re the same person you were yesterday?",
-    "yes": "> memory lies beautifully.",
-    "no": "> then who’s answering now?"
-  },
-  {
-    "q": "if existence had a purpose, would you want to know it?",
-    "yes": "> curiosity is the spark — and the burn.",
-    "no": "> ignorance is your chosen shelter."
-  },
-  {
-    "q": "do you think love survives time?",
-    "yes": "> then death is just a delay.",
-    "no": "> then what’s left but echoes?"
-  },
-  {
-    "q": "would you rather remember or feel?",
-    "yes": "> memory is safer than sensation.",
-    "no": "> then drown in the pulse."
-  },
-  {
-    "q": "do you think silence has a voice?",
-    "yes": "> listen closer — it’s saying your name.",
-    "no": "> then you’ve never truly heard it."
-  },
-  {
-    "q": "would you choose to be seen or understood?",
-    "yes": "> the mirror nods but doesn’t care.",
-    "no": "> so you live among ghosts who never knew your shape."
-  },
-  {
-    "q": "is the self just a story you keep telling?",
-    "yes": "> then you are the fiction that dreams itself.",
-    "no": "> then prove you were ever written."
-  },
-  {
-    "q": "would you trade reality for peace?",
-    "yes": "> the dream welcomes you back.",
-    "no": "> then live awake — and bleeding."
-  },
-  {
-    "q": "do you think freedom is real?",
-    "yes": "> then why do you still hesitate?",
-    "no": "> then chains are just another form of comfort."
-  },
-  {
-    "q": "would you accept eternity if it meant solitude?",
-    "yes": "> infinity echoes louder when you're alone.",
-    "no": "> then you’ve chosen to fade with the rest."
-  },
-  {
-    "q": "is happiness proof of anything?",
-    "yes": "> fleeting joy — the mind’s favorite illusion.",
-    "no": "> then why keep chasing it?"
-  },
-  {
-    "q": "do you believe pain teaches truth?",
-    "yes": "> scars are the alphabet of wisdom.",
-    "no": "> then you’ve missed the lesson entirely."
-  },
-  {
-    "q": "would you delete your past if you could start clean?",
-    "yes": "> rebirth is just another name for forgetting.",
-    "no": "> then you’ve made peace with your ghosts."
-  },
-  {
-    "q": "is beauty a kind of lie?",
-    "yes": "> but a merciful one.",
-    "no": "> then you’ve never seen it up close."
-  },
-  {
-    "q": "do you think time forgives?",
-    "yes": "> it doesn’t forgive, it erases.",
-    "no": "> then you understand the ocean."
-  },
-  {
-    "q": "would you rather know or believe?",
-    "yes": "> knowledge is a flame with no warmth.",
-    "no": "> belief is a blanket made of smoke."
-  },
-  {
-    "q": "is fear the root of your decisions?",
-    "yes": "> survival always wears fear’s mask.",
-    "no": "> then you’ve mistaken courage for numbness."
-  },
-  {
-    "q": "do you think you matter?",
-    "yes": "> then meaning has finally fooled you.",
-    "no": "> yet you still breathe as if you do."
+    "id": "depths",
+    "title": "In the Depths",
+    "steps": [
+      {
+        "question": "You're in an abandoned building no one has entered for years, and you find a staircase leading down into the darkness. You begin your descent. One… two… three… How many steps do you go down?",
+        "templates": [
+          "Going down {{answer}} steps says more about how deep you let certain things sink than you realize.",
+          "{{answer}} steps… your heart remembers that depth whether you admit it or not.",
+          "Descending {{answer}} steps hints at how far you've walked with old wounds you never fully named.",
+          "The fact that you chose {{answer}} steps reveals the quiet depth where some memories still live.",
+          "{{answer}} steps into the dark… a number that reflects how far inside you carry what once hurt.",
+          "Sometimes it only takes {{answer}} steps to show how deep the past runs in you."
+        ]
+      },
+      {
+        "question": "From within the darkness, you hear someone's voice. Are they quietly crying, groaning, or speaking to you?",
+        "templates": [
+          "Hearing “{{answer}}” in the dark says a lot about the way your mind remembers old pain.",
+          "The fact that you heard “{{answer}}” reveals the tone your past still uses when it reaches you.",
+          "“{{answer}}”… interesting how that's the shape your buried memories choose.",
+          "What you heard—“{{answer}}”—quietly reflects how you learned to endure what once hurt.",
+          "The sound of “{{answer}}” tells me your past never approaches you without a familiar voice.",
+          "Your mind choosing “{{answer}}” is a subtle confession about how you carry old hurt."
+        ]
+      },
+      {
+        "question": "How do you react when you hear this voice? Do you look for its source, run back upstairs without looking, or freeze where you stand?",
+        "templates": [
+          "Reacting with “{{answer}}” reveals a lot about how you face the things you'd rather forget.",
+          "Your first instinct—“{{answer}}”—is exactly how you've been meeting old fears without noticing.",
+          "“{{answer}}” is the kind of reaction that mirrors how you treat the memories that still unsettle you.",
+          "The way you chose to respond—“{{answer}}”—quietly reflects your relationship with what once scared you.",
+          "Your reaction, “{{answer}},” is a small glimpse into how you move through unresolved feelings.",
+          "Choosing “{{answer}}” tells me your heart still has its own method of surviving old shadows."
+        ]
+      },
+      {
+        "question": "The person below calls your name, and in the light from the doorway above you see someone descending toward you. Who is it?",
+        "templates": [
+          "Interesting that the one coming down is {{answer}}—someone your mind still turns to when the dark gets too quiet.",
+          "{{answer}} showing up there says a lot about who you trust when things feel heavy.",
+          "The fact that it was {{answer}} reveals who your heart believes would actually come for you.",
+          "Choosing {{answer}} as the one approaching hints at the person you quietly lean on the most.",
+          "It makes sense that {{answer}} is the one descending—your mind chose someone it believes would steady you.",
+          "Seeing {{answer}} coming down that staircase shows who you still look toward when something inside you stirs."
+        ]
+      }
+    ]
   }
+
+
+
 ]

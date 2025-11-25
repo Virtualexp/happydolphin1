@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>welcome!</title>
 
+  <link rel="icon" href="gallery/dolphin/dolphinmini.png">
+
   <!-- 98.css (Windows 98 style) -->
   <link rel="stylesheet" href="https://unpkg.com/98.css/dist/98.css">
 
@@ -24,23 +26,126 @@
 
 <body>
 
+  <canvas id="canvas1" style="position:fixed; inset:0; z-index:0; pointer-events:none;"></canvas>
+  <canvas id="canvas2" style="position:fixed; inset:0; z-index:1; pointer-events:none;"></canvas> 
+
   <!-- Üstteki Dolphin + Yazı -->
   <div class="center-content">
     <h1>totaly not a virus, trust me..</h1>
-    <div class="profile"></div>
+
+    <!-- Profil çerçevesi (tek profile-area burada olacak) -->
+    <div class="dolphin-profile">
+      <div id="profile-area"></div>
+    </div>
   </div>
 
   <!-- Menü Butonları -->
   <div class="menu-container">
-    <button id="terminalBtn" class="button menu-btn">Open Terminal</button>
-    <button id="oceanosBtn" class="button menu-btn">Open OceanOS</button>
-    <button id="galleryBtn" class="button menu-btn">Open Gallery</button>
+    <button id="terminalBtn" class="button menu-btn">Terminal</button>
+    <button id="oceanosBtn" class="button menu-btn">OceanOS</button>
+    <button id="galleryBtn" class="button menu-btn">Gallery</button>
     <button id="minesBtn" class="button menu-btn">Minesweeper</button>
     <button id="aboutBtn" class="button menu-btn">About Me</button>
+    <button id="attractorBtn" class="button menu-btn">Attractor</button>
   </div>
+  
 
-  <!-- Tüm modülleri yöneten bootstrap -->
-  <script type="module" src="main.js"></script>
+  <!-- Shader scripts -->
+<script id="update-vs" type="x-shader/x-vertex">
+#version 300 es
+precision highp float;
+
+uniform float u_Speed;
+uniform float u_Consts[5];    // [sigma, rho, beta, ...] ilk 3'ü Lorenz'de kullanılıyor
+uniform sampler2D u_RgbNoise; // motor bunu bekliyor; burada kullanmıyoruz ama dursun
+
+in vec3 i_Position;
+out vec3 o_Position;
+
+void main() {
+    // Brandon'ın Lorenz update'i, uyarlanmış hali
+    float a = i_Position.x;
+    float b = i_Position.y;
+    float c = i_Position.z;
+
+    // u_Consts[0..2] -> sigma, rho, beta
+    float s = u_Consts[0];
+    float r = u_Consts[1];
+    float bt = u_Consts[2];
+
+    vec3 deriv = vec3(
+        s * (b - a),    // dx/dt
+        r * a - a * c - b, // dy/dt
+        a * b - bt * c     // dz/dt
+    );
+
+    o_Position = i_Position + deriv * u_Speed;
+}
+</script>
+
+
+  <script id="update-fs" type="x-shader/x-fragment">
+    #version 300 es
+    precision highp float;
+    void main() {
+      discard;
+    }
+  </script>
+
+  <script id="render-vs" type="x-shader/x-vertex">
+  #version 300 es
+  precision highp float;
+
+  uniform vec3 u_Camera;
+  uniform float u_Transform;   // scale gibi kullanılıyor
+  uniform mat4 u_Scale;        // ortografik matris
+  uniform mat3 u_Perspective;  // rotation
+  in vec3 i_Position;
+
+  void main() {
+    vec3 p = u_Perspective * (i_Position - u_Camera);
+    gl_Position = u_Scale * vec4(p, u_Transform);
+    gl_PointSize = 1.0;  // Brandon 1.0 kullanıyor; ince gelirse 1.5–2.0 yapabilirsin
+  }
+  </script>
+
+
+
+<script id="render-fs" type="x-shader/x-fragment">
+#version 300 es
+precision highp float;
+
+uniform vec3 u_Colors[3];
+out vec4 fragColor;
+
+void main() {
+  // Brandon tarzı üç renk arası geçiş
+  vec3 c0 = u_Colors[0];
+  vec3 c1 = u_Colors[1];
+  vec3 c2 = u_Colors[2];
+
+  // Yükseklik ve "derinlik" parametreleriyle gradient
+  float t1 = gl_FragCoord.y / 650.0;
+  float t2 = gl_FragCoord.z / 1.0;
+
+  vec3 mix1 = mix(c0, c1, t1);
+  vec3 mix2 = mix(mix1, c2, t2);
+
+  fragColor = vec4(mix2, 0.75);  // hafif şeffaf, overlap'ler yumuşuyor
+}
+</script>
+
+
+  <!-- JS Modülleri -->
+  <script type="module" src="./attractor.js"></script>
+  <script type="module" src="./attrs.js"></script>
+  <script type="module" src="./attractorWindow.js"></script>
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./matrix.js"></script>
+
+
+
+
 
 </body>
 </html>

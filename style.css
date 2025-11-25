@@ -1,20 +1,26 @@
 body {
-  background-image: url('gallery/waves.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: 
+      url('gallery/lorenz1.gif'),
+      url('gallery/lorenz2.jpg');
+
+  background-repeat: no-repeat, repeat;       
+  background-size: 1280px 1280px, cover;     
+  background-position: center center, center; 
+
   color: #40FFB0;
   font-family: "VT323", monospace;
   height: 100vh;
   margin: 0;
   overflow: hidden;
 }
+
+
 body::after {
   content: "";
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 20, 0.35);
+  background-color: rgba(0, 0, 20, 0.15);
   pointer-events: none;
 }
 
@@ -28,7 +34,7 @@ body::after {
   align-items: center;
   gap: 15px;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 h1 {
@@ -41,16 +47,30 @@ h1 {
   letter-spacing: 2px;
 }
 
-.profile {
-  width: 340px;
-  height: 340px;
-  border: 2px solid #40FFB0;
-  border-radius: 50%;
-  background-image: url('gallery/dolphin/dolphin.jpg');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 25px #40FFB0;
+.dolphin-profile {
+    position: relative;
+    margin-top: 10px;
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+    border: 2px solid #40FFB0;
+    box-shadow: 0 0 25px #40FFB0;
+    background-color: transparent;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Sprite Factory ile gelen tüm sprite’lar buradan ölçeklenir */
+.sprite {
+    transform: scale(2.5);
+    transform-origin: center;
+    image-rendering: pixelated;
+}
+
 
 .win98 {
   position: absolute;
@@ -63,7 +83,7 @@ h1 {
 
 .menu-container {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -71,12 +91,6 @@ h1 {
   align-items: center;
   gap: 10px;
   z-index: 2;
-}
-.trail {
-  position: absolute;
-  pointer-events: none;
-  opacity: 1;
-  transition: opacity 3s linear;
 }
 
 /* Pencere içleri 98.css tarzında */
@@ -86,6 +100,8 @@ h1 {
   font-size: medium !important;
 }
 .window-body { background-color: #c0c0c0 !important; }
+
+
 .cmd-input {
   background: white !important;
   color: black !important;
@@ -102,24 +118,11 @@ h1 {
   .message-icon { width: 24px; height: 24px; }
 }
 
-/* 🌐 Network Mirage efektleri */
-body.network-mirage {
-  filter: blur(0.6px) brightness(1.05) saturate(1.1) hue-rotate(8deg);
-}
-body.network-mirage.end { filter: none; }
 
-/* 🔒 Mirage sırasında kilit */
-#mirage-lock {
-  position: fixed; inset: 0;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0.2px);
-  z-index: 9998;
-  pointer-events: all;
-  cursor: not-allowed;
-}
 
 /* Buton boyutları ve görsel tutarlılık */
 .menu-btn {
+  background: rgba(8, 163, 124, 0.5);
   width: 200px;
   font-size: 20px !important;
   padding: 10px 0 !important;
@@ -132,3 +135,40 @@ body.network-mirage.end { filter: none; }
   transform: scale(1.3);
   box-shadow: 0 0 10px #40FFB0;
 }
+
+#canvas1 {
+  opacity: 0.20;  /* arkadaki koyu yeşil blur */
+}
+
+#canvas2 {
+  opacity: 0.25;  /* üstteki beyaz highlight */
+}
+
+
+/* ========== Ambient Consciousness Layer ========== */
+#consciousness-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2; 
+  pointer-events: none;
+
+  /* Hafif dalgalanan renk */
+  animation: hueShift 9s infinite linear, breathe 6s infinite ease-in-out;
+
+  mix-blend-mode: overlay;
+  opacity: 0.25;
+}
+
+@keyframes hueShift {
+  0%   { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(8deg); }
+}
+
+@keyframes breathe {
+  0%   { opacity: 0.14; }
+  50%  { opacity: 0.20; }
+  100% { opacity: 0.14; }
+}
+
+
+
